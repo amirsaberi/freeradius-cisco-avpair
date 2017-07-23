@@ -1,6 +1,6 @@
 # Extract user device information from Cisco AVPair
 
-This is the guide for extracting user device information from a Cisco Radius request packet.
+This is the guide for extracting user device information from a Cisco Radius request packet for put to the database.
 
 # Tested on
 
