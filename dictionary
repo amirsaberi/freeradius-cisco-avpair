@@ -1,0 +1,5 @@
+ATTRIBUTE      Device-OS-Version        3000    string
+ATTRIBUTE      Device-OS        3001    string
+ATTRIBUTE      Device-MAC        3002    string
+ATTRIBUTE      Device-Type        3003    string
+ATTRIBUTE      Device-UID        3004    string
