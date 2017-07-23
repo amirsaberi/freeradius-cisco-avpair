@@ -1,0 +1,30 @@
+add-custom-avps {
+
+	foreach &Cisco-AVPair {
+		if ("%{Foreach-Variable-0}" =~ /^mdm-tlv=device-platform=(.+)/) {
+        		update request {
+                		&Device-OS := "%{1}"
+                	}
+		}
+		elsif ("%{Foreach-Variable-0}" =~ /^mdm-tlv=device-platform-version=(.+)/) {
+                        update request {
+                                &Device-OS-Version := "%{1}"
+                        }
+                }
+		elsif ("%{Foreach-Variable-0}" =~ /^mdm-tlv=device-mac=(.+)/) {
+                        update request {
+                                &Device-MAC := "%{1}"
+                        }
+                }
+		elsif ("%{Foreach-Variable-0}" =~ /^mdm-tlv=device-type=(.+)/) {
+                        update request {
+                                &Device-Type := "%{1}"
+                        }
+                }
+		elsif ("%{Foreach-Variable-0}" =~ /^mdm-tlv=device-uid=(.+)/) {
+                        update request {
+                                &Device-UID := "%{1}"
+                        }
+                }
+        }
+}
